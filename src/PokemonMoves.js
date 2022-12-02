@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-function PokemonMoves() {
+function PokemonMoves(props) {
   const [pokemonData, setPokemonData] = useState(null);
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/1")
+    fetch(`https://pokeapi.co/api/v2/pokemon/${props.pokemonId}`)
       .then((res) => res.json())
       .then((data) => {
         setPokemonData(data);
         console.log(data);
       });
-  }, []);
+  }, [props.pokemonId]);
   return (
     <div>
       {pokemonData ? (
