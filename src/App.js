@@ -4,7 +4,7 @@ import Logo from "./Logo";
 
 import CaughtPokemon from "./CaughtPokemon";
 import BestPokemon from "./BestPokemon";
-import PokemonMoves from "./PokemonMoves";
+import PokemonMovesSelector from "./PokemonMovesSelector";
 
 const App = () => {
   const abilities = ["Anticipation", "Adaptability", "Run-Away"];
@@ -16,7 +16,7 @@ const App = () => {
       <Logo appName={"Asees's Pokedox"} click={logWhenClicked} />
       <BestPokemon abilities={abilities} />
       <CaughtPokemon date={new Date().toLocaleDateString()} />
-      <PokemonMoves />
+      <PokemonMovesSelector />
     </div>
   );
 };
